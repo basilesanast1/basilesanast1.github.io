@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>basilesanast1's Lair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Blog Posts</h1>
+    <div class="logo">Here is where the cool shit is</div>
+  </header>
+  <main>
+    <h2>Latest Posts</h2>
+    <ul id="blog-list"></ul>
+  </main>
+
+  <script>
+    const posts = [
+      { title: "Piracy in Greece: Complete Bullshit", file: "post-1.html" }
+    ];
+
+    const list = document.getElementById('blog-list');
+    posts.forEach((post, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `${index + 1}. <a href="blog-posts/${post.file}">${post.title}</a>`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
